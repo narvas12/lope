@@ -1,0 +1,199 @@
+@import url('css2');
+.mainbl {
+    width: 100vw;
+    margin-top: 5vh;
+    height: 90vh;
+    background: linear-gradient(to right, #ff6232 2px, transparent 2px) 0 0, linear-gradient(to right, #ff6232 2px, transparent 2px) 0 100%, linear-gradient(to left, #ff6232 2px, transparent 2px) 100% 0, linear-gradient(to left, #ff6232 2px, transparent 2px) 100% 100%, linear-gradient(to bottom, #ff6232 2px, transparent 2px) 0 0, linear-gradient(to bottom, #ff6232 2px, transparent 2px) 100% 0, linear-gradient(to top, #ff6232 2px, transparent 2px) 0 100%, linear-gradient(to top, #ff6232 2px, transparent 2px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100px 50px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    z-index: -5;
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}
+
+canvas {
+    display: block;
+}
+
+.area {
+    position: relative;
+    display: block;
+    top: 25px;
+    margin-left: 25px;
+    font-size: 24px;
+    color: #ff6232;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: blur .75s ease-out infinite;
+    text-shadow: 0px 0px 5px #ff6232, 0px 0px 7px #ff6232;
+}
+
+@keyframes blur {
+    from {
+        text-shadow: 0px 0px 10px #ff6232, 0px 0px 10px #ff6232, 0px 0px 25px #ff6232, 0px 0px 25px #ff6232, 0px 0px 25px #ff6232, 0px 0px 25px #ff6232, 0px 0px 25px #ff6232, 0px 0px 25px #ff6232, 0px 0px 50px #ff6232, 0px 0px 50px #ff6232, 0px 0px 50px rgba(255, 255, 255, .3), 0px 0px 150px rgba(255, 255, 255, .3), 0px 10px 100px rgba(255, 255, 255, .3), 0px 10px 100px rgba(255, 255, 255, .3), 0px 10px 100px rgba(255, 255, 255, .3), 0px 10px 100px rgba(255, 255, 255, .3), 0px -10px 100px rgba(255, 255, 255, .3), 0px -10px 100px rgba(255, 255, 255, .3);
+    }
+}
+
+.maintitle {
+    font-weight: 800;
+    font-size: 30px;
+    color: #ff6232;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.image img {
+    max-width: 350px;
+    text-align: center;
+}
+
+.image {
+    text-align: center;
+    margin-bottom: 65px;
+    margin-top: 35px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #ff6232;
+    font-weight: 800;
+}
+
+.subtext {
+    font-size: 14px;
+    color: #ff6232;
+    font-weight: 400;
+}
+
+.btn-row {
+    margin: 35px;
+    margin-bottom: 65px;
+}
+
+.interact-button,
+.interact-button::after {
+    font-size: 24px;
+    background: linear-gradient(45deg, transparent 5%, #fff 5%);
+    padding: 5px 35px;
+    border: 0;
+    color: #000000;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #000000;
+    outline: transparent;
+    position: relative;
+    text-decoration: none;
+}
+
+.interact-button::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 9% 0);
+    content: 'Connect Wallet';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #000000 5%);
+    text-shadow: -3px -3px 0px #23ffe3, 3px 3px 0px #000000;
+    clip-path: var(--slice-0);
+}
+
+.interact-button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@media (max-width: 1600px) {
+    .image img {
+        max-width: 250px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1366px) {
+    .image img {
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    .image img {
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .image img {
+        max-width: 500px;
+        text-align: center;
+    }
+}
+
+.col-lg-6 {
+    text-align: center;
+}
