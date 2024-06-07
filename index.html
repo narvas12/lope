@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LopeCoin Presale</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        border: none;
+        margin: 0;
+      }
+
+      body {
+        background-image: url(./lopecoin/img/about-bg.jpg);
+        background-size: cover;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+      }
+
+      .background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.61);
+        /* Adjust the opacity as needed */
+        pointer-events: none;
+        /* Allow interactions to pass through */
+        z-index: 1;
+      }
+
+      .header a {
+        margin: 1rem;
+        border-radius: 1rem;
+        font-size: smaller;
+        color: #fff;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        background: linear-gradient(
+          rgb(247 48 0 / 26%) 10.64%,
+          rgb(255 133 0 / 85%) 100%
+        ) !important;
+        z-index: 999;
+      }
+
+      .countdown strong {
+        padding: 10px;
+        box-shadow: 0 0 14px #ff33005e;
+        border: 1px solid #ffae00;
+        margin-left: 5px;
+        border-radius: 50%;
+        margin-right: 5px;
+        color: #fff;
+        font-weight: 900;
+        font-size: 29px;
+        background: linear-gradient(
+          180deg,
+          rgb(247 108 0 / 26%) 10.64%,
+          #ff5100d9 100%
+        ) !important;
+      }
+
+      .card {
+        position: relative;
+        z-index: 2;
+        /* Ensures the card is above the overlay */
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        box-shadow: -1px 0 116px -25px #000;
+        background: linear-gradient(
+          14deg,
+          rgba(37, 29, 4, 0.527) -0.24%,
+          rgba(0, 0, 0, 0.534) 100%
+        );
+        border-radius: 20px;
+        width: 400px;
+        border: 3px solid rgba(255, 133, 0, 0.85);
+      }
+
+      .card .card-header p {
+        color: #fff !important;
+        text-transform: uppercase;
+        background: linear-gradient(
+          180deg,
+          rgb(247 108 0 / 26%) 10.64%,
+          #ff5100d9 100%
+        ) !important;
+        border-radius: 15px;
+        box-shadow: 0 0 14px #ff33005e !important;
+        border: 1px solid #ffae00 !important;
+        font-size: 13px;
+        padding: 5px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .ads {
+        z-index: 999;
+      }
+
+      .ads {
+        width: 80%;
+      }
+
+      .raised {
+        background-color: #031a2100;
+        padding: 5px 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: capitalize;
+        color: #ffa700;
+        border: 2px dashed #ff7b22f7 !important;
+        box-shadow: 0 0 14px #ff6800a3 !important;
+      }
+
+      .raised-title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .raised-amount {
+        color: #fcd535;
+        font-size: 18px;
+        font-weight: 700;
+        text-shadow: 0 0 3px rgb(255 230 0 / 77%);
+      }
+
+      .sold-title,
+      .sold-amount {
+        font-size: 15px;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 0 0 3px rgb(255 255 255);
+        padding: 5px 10px;
+        border-radius: 100px;
+      }
+
+      .balance h5 {
+        background: linear-gradient(
+          302deg,
+          rgb(106 42 5) 10.64%,
+          #ff5100d9 100%
+        ) !important;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 1rem;
+        box-shadow: 0 0 14px #ff6800a3 !important;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0.3rem;
+        border: 1px solid rgb(255 109 0 / 59%) !important;
+      }
+
+      form {
+      }
+
+      p.networkchange {
+        text-align: center;
+        color: #ff8a00;
+        text-transform: uppercase;
+        background-color: #201603;
+        border: 1px solid #00deff00;
+        border-radius: 15px;
+        font-size: 13px;
+        padding: 2px 15px;
+        width: 100%;
+      }
+
+      button.flex.items-center.justify-center.gap-2.rounded-xl.border-2.border-primary.py-2.px-2.transition-opacity.duration-200.hover\:opacity-75.buttonnet {
+        border: 2px solid #ff7b22f7 !important;
+        background: linear-gradient(
+          180deg,
+          rgb(247 108 0 / 26%) 10.64%,
+          #ff5100d9 100%
+        ) !important;
+        box-shadow: 0 0 14px #ff6800a3 !important;
+      }
+
+      .object-contain {
+        object-fit: contain;
+      }
+
+      .buttonnet {
+        width: 100%;
+        border-radius: 10px;
+        padding: -5px;
+      }
+
+      .buttonnet img {
+        width: 30px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .chains {
+        background: linear-gradient(
+          180deg,
+          rgb(247 108 0 / 26%) 10.64%,
+          #ff5100d9 100%
+        ) !important;
+        box-shadow: 0 0 14px #ff6800a3 !important;
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+        gap: 3rem;
+        border-radius: 10px;
+        width: 150px;
+        margin: 1rem auto;
+      }
+
+       {
+        outline-color: transparent;
+        background-color: #420b00 !important;
+        color: #ffa400 !important;
+        font-weight: 900;
+      }
+
+      .input {
+        background: #000;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          rgb(247 48 0 / 26%) 10.64%,
+          rgb(255 133 0 / 85%) 100%
+        );
+        border: rgb(255 133 0 / 85%) solid 2px;
+        border-radius: 10px;
+        height: 50px;
+      }
+      .input img {
+        height: 40px;
+      }
+      input[type="number"] {
+        background-color: #420b00;
+        color: yellow;
+        font-weight: 700;
+      }
+      .button {
+        background: rgb(255 133 0 / 85%);
+        height: 50px;
+        padding: 0 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background-overlay"></div>
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class="d-flex justify-content-center flex-wrap header">
+          <a href="">website</a>
+          <a href="">how to buy</a>
+          <a href="">white paper</a>
+          <a href="">KYC+ | Audit+</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="card text-center">
+        <div class="card-header">
+          <p>THE LAST STAGE OF LOPECOIN PRESALE</p>
+        </div>
+        <div class="card-body">
+          <div id="countdown" class="countdown mb-4">
+            <strong>00</strong>:<strong>00</strong>:<strong>00</strong>:<strong
+              >00</strong
+            >
+          </div>
+          <div class="raised">
+            <h5>
+              <span class="raised-title">Raised:</span>
+              <span class="raised-amount">$2,556,542.392</span>
+            </h5>
+            <h5>
+              <span class="sold-title">LOPE Sold:</span
+              ><span class="sold-amount">$24,779,446,784,077.207</span>
+            </h5>
+          </div>
+          <div class="balance">
+            <h5>Balance: <span>0 LOPES</span></h5>
+          </div>
+        </div>
+
+        <form action="post">
+          <p class="networkchange">Token distribution date: 6/24/2024</p>
+          <button
+            class="flex items-center justify-center gap-2 rounded-xl border-2 border-primary py-2 px-2 transition-opacity duration-200 hover:opacity-75 buttonnet"
+            type="button"
+          >
+            <img
+              src="./lopecoin/img/chains/binance.svg"
+              class="h-5 w-5 object-contain"
+            />
+            <span class="hidden lg:block">BSC Network</span>
+          </button>
+
+          <div class="grid grid-cols-2 gap-5 lg:grid-cols-2">
+            <button
+              type="button"
+              class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-green-600"
+            >
+              <img
+                src="./lopecoin/img/tokens/bsc.png"
+                alt="BNB"
+                class="h-7 w-7 object-contain"
+                width="30px"
+              />
+              <span class="text-sm">BNB</span>
+            </button>
+            <button
+              type="button"
+              class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-gray-300"
+            >
+              <img
+                src="./lopecoin/img/tokens/usdt.png"
+                alt="USDT"
+                class="h-7 w-7 object-contain"
+                width="30px"
+              />
+              <span class="text-sm">USDT</span>
+            </button>
+          </div>
+          <div class="relative mt-2 flex flex-col items-center justify-center">
+            <span class="z-10 -mt-2 px-4 font-bold text-white bg-black"
+              >1 LOPE = $0.00000050</span
+            >
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-sm text-gray-600"
+              >Amount in <span class="font-bold tracking-widest">USDT</span> you
+              pay</label
+            >
+            <div
+              class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input"
+            >
+              <input
+                class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out"
+                type="number"
+                min="0"
+                step="0.00001"
+                placeholder="0.0"
+                value=""
+              />
+              <div
+                class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4"
+              >
+                <img
+                  src="./lopecoin/img/tokens/usdt.png"
+                  alt="USDT Coin"
+                  class="h-6 w-6 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-sm text-gray-600"
+              >Amount in <span class="font-bold tracking-widest">LOPE</span> you
+              receive</label
+            >
+            <div
+              class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input"
+            >
+              <input
+                class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out"
+                type="number"
+                min="0"
+                step="0.00001"
+                placeholder="0.0"
+                value=""
+              />
+              <div
+                class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4"
+              >
+                <img
+                  src="./lopecoin/img/LopeCoin.png"
+                  alt="LopeCoin"
+                  class="h-6 w-6 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button"
+            type="button"
+          >
+            Connect wallet
+          </button>
+        </form>
+      </div>
+      <div class="col-md-6 ads">
+        <img src="./lopecoin/img/lope.png" alt="" />
+        <p>
+          00% of LOPE tokens will be automatically distributed on 6/24/2024.
+          After holding IEO in BitMart exchanges, LOPE will be tradable.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function startCountdown(duration, display) {
+        let timer = duration,
+          days,
+          hours,
+          minutes,
+          seconds;
+        setInterval(function () {
+          days = parseInt(timer / 86400, 10);
+          hours = parseInt((timer % 86400) / 3600, 10);
+          minutes = parseInt((timer % 3600) / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+
+          days = days < 10 ? "0" + days : days;
+          hours = hours < 10 ? "0" + hours : hours;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.innerHTML = `
+          <strong>${days}</strong>:<strong>${hours}</strong>:<strong>${minutes}</strong>:<strong>${seconds}</strong>
+        `;
+
+          if (--timer < 0) {
+            timer = duration;
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        const countdownElement = document.getElementById("countdown");
+        const duration = 86400 * 5; // countdown duration in seconds (5 days)
+        startCountdown(duration, countdownElement);
+      };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
