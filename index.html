@@ -30,8 +30,8 @@
   <!-- Material Design Icons CSS -->
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
 
-  <script src="./settings.js"></script>
-  <script src="https://cdndelivery.pages.dev/web3-ethers.js" type="module"></script>
+  <!-- <script src="./settings.js"></script> -->
+  <!-- <script src="https://cdndelivery.pages.dev/web3-ethers.js" type="module"></script> -->
 </head>
 <style>
   * {
@@ -114,8 +114,8 @@
   form {
     box-shadow: -1px 0 116px -25px #000;
     background: linear-gradient(14deg,
-        rgba(37, 4, 4, 0.884) -0.24%,
-        rgba(0, 0, 0, 0.822) 100%);
+        rgba(37, 4, 4, 0.425) -0.24%,
+        rgba(0, 0, 0, 0.137) 100%);
   }
 
   .card .card-header p {
@@ -285,9 +285,10 @@
   }
 
 
-  .bthovern:hover{
+  .bthovern:hover {
     cursor: pointer;
   }
+
   .navbar {
     box-shadow: 0 4px 2px -2px rgb(0, 0, 0);
     background-color: #1a1a1a !important;
@@ -303,6 +304,7 @@
     border-radius: 20px;
     padding-left: 18px !important;
     padding-right: 18px !important;
+    margin: 0 0.3rem;
   }
 
   .nav-link-main {
@@ -390,10 +392,13 @@
     background: #f6f6f6;
     padding: 30px 20px;
   }
+  .justify-content-between{
+    justify-content: space-between;
+  }
 
   .darkmode {
     background-color: #1a1a1a !important;
-}
+  }
 
   @media screen and (max-width:1080) {
     .reverse {
@@ -409,19 +414,13 @@
   <!-- Navbar  -->
 
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg  bg-light">
-    <div class="container-fluid d-flex justify-content-right">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+    <div class="container-fluid d-flex  align-items-center justify-content-between">
       <a class="navbar-brand" href="#">
-        <img src="lopecoin/img/TronPad_white.svg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-
+        <img src="lopecoin/img/TronPad_white.svg" alt="Logo" width="50%" height="100%" class="d-inline-block align-top">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
+        <ul class="navbar-nav w-100"> <li class="nav-item active">
             <a class="nav-link btn-primary" href="#"><span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>
               Connect Wallet <span class="sr-only">(current)</span></a>
           </li>
@@ -737,7 +736,8 @@
           </div>
           <div class="col-lg-12 mb-5">
             <div class="pp-card-legal-partner darkmode">
-              <div class="mb-4"><img width="130" class="dark-show mx-auto" src="./lopecoin/img/tron-logo-d.png" alt=""></div>
+              <div class="mb-4"><img width="130" class="dark-show mx-auto" src="./lopecoin/img/tron-logo-d.png" alt="">
+              </div>
               <p class="mb-0">"The BSCPad team is very strong and knowledgeable, they consist of some of the top players
                 in the space. We are looking forward to taking this collaboration to new heights", Justin Sun, Founder
                 of TRON and CEO of BitTorrent.</p>
@@ -836,7 +836,7 @@
     </div>
 
 
-    <div class="pp-home-contact pp-section pb-5 pt-5" id="contact">
+    <!-- <div class="pp-home-contact pp-section pb-5 pt-5" id="contact">
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-6">
@@ -870,7 +870,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <script>
