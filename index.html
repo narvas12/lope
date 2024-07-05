@@ -49,7 +49,7 @@
     margin: 0;
     position: relative;
     background-position: center;
-    background-color: #0000006b;
+    background-color: #0000002c;
   }
 
   .background-overlay {
@@ -114,8 +114,8 @@
   form {
     box-shadow: -1px 0 116px -25px #000;
     background: linear-gradient(14deg,
-        rgba(37, 4, 4, 0.425) -0.24%,
-        rgba(0, 0, 0, 0.137) 100%);
+        rgba(37, 4, 4, 0.836) -0.24%,
+        rgba(0, 0, 0, 0.863) 100%);
   }
 
   .card .card-header p {
@@ -392,7 +392,8 @@
     background: #f6f6f6;
     padding: 30px 20px;
   }
-  .justify-content-between{
+
+  .justify-content-between {
     justify-content: space-between;
   }
 
@@ -409,434 +410,428 @@
 </style>
 
 <body>
-  <div class="background-overlay"></div>
 
-  <!-- Navbar  -->
+  <div>
+    <div class="background-overlay"></div>
 
-  <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
-    <div class="container-fluid d-flex  align-items-center justify-content-between">
-      <a class="navbar-brand" href="#">
-        <img src="lopecoin/img/TronPad_white.svg" alt="Logo" width="50%" height="100%" class="d-inline-block align-top">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100"> <li class="nav-item active">
-            <a class="nav-link btn-primary" href="#"><span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>
-              Connect Wallet <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><span><i class="mdi mdi-fire me-1"></i></span> Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><span><i class="mdi mdi-blender-software me-1"></i></span> Staking</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><span><i class="mdi mdi-bridge me-1"></i></span> Bridge</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
-
-  <div class="container-fluid mb-3">
-    <div class="container">
-      <div class="d-flex justify-content-center flex-wrap header">
-        <!-- <a href="">website</a>
-        <a href="">how to buy</a>
-        <a href="">white paper</a>
-        <a href="">KYC+ | Audit+</a> -->
-      </div>
-    </div>
-  </div>
-
-  <div class="container d-flex justify-content-center flex-wrap flex-row-reverse reverse">
-    <div class="card text-center">
-      <div class="card-header">
-        <p>THE LAST STAGE OF TronPad PRESALE</p>
-      </div>
-      <div class="card-body">
-        <div id="countdown" class="countdown mb-4">
-          <strong>00</strong>:<strong>00</strong>:<strong>00</strong>:<strong>00</strong>
-        </div>
-        <div class="raised">
-          <h5>
-            <span class="raised-title">Raised:</span>
-            <span class="raised-amount">$2,556,542.392</span>
-          </h5>
-          <h5>
-            <span class="sold-title">TronPad Sold:</span><span class="sold-amount">$24,779,446,784,077.207</span>
-          </h5>
-        </div>
-        <div class="balance">
-          <h5>Balance: <span>0 TronPads</span></h5>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+      <div class="container-fluid d-flex  align-items-center justify-content-between">
+        <a class="navbar-brand" href="#">
+          <img src="lopecoin/img/TronPad_white.svg" alt="Logo" width="50%" height="100%"
+            class="d-inline-block align-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item active">
+              <a class="nav-link btn-primary" href="#"><span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>
+                Connect Wallet <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span><i class="mdi mdi-fire me-1"></i></span> Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span><i class="mdi mdi-blender-software me-1"></i></span> Staking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span><i class="mdi mdi-bridge me-1"></i></span> Bridge</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+  
+    <div class="container d-flex justify-content-center flex-wrap flex-row-reverse reverse">
+      <div class="card text-center">
+        <div class="card-header">
+          <p>THE LAST STAGE OF TronPad PRESALE</p>
+        </div>
+        <div class="card-body">
+          <div id="countdown" class="countdown mb-4">
+            <strong>00</strong>:<strong>00</strong>:<strong>00</strong>:<strong>00</strong>
+          </div>
+          <div class="raised">
+            <h5>
+              <span class="raised-title">Raised:</span>
+              <span class="raised-amount">$2,556,542.392</span>
+            </h5>
+            <h5>
+              <span class="sold-title">TronPad Sold:</span><span class="sold-amount">$24,779,446,784,077.207</span>
+            </h5>
+          </div>
+          <div class="balance">
+            <h5>Balance: <span>0 TronPads</span></h5>
+          </div>
+        </div>
 
-      <form action="post">
-        <p class="networkchange">Token distribution date: 6/24/2024</p>
-        <button
-          class="flex items-center justify-center gap-2 rounded-xl border-2 border-primary py-2 px-2 transition-opacity duration-200 hover:opacity-75 buttonnet"
-          type="button">
-          <img src="./lopecoin/img/chains/tron.svg" class="h-5 w-5 object-contain" />
-          <span class="hidden lg:block">BSC Network</span>
-        </button>
-
-        <div class="grid grid-cols-2 gap-5 lg:grid-cols-2">
-          <button type="button"
-            class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-green-600">
-            <img src="./lopecoin/img/chains/tron.svg" alt="Tron" class="h-7 w-7 object-contain" width="30px" />
-            <span class="text-sm">Tron</span>
+        <form action="post">
+          <p class="networkchange">Token distribution date: 6/24/2024</p>
+          <button
+            class="flex items-center justify-center gap-2 rounded-xl border-2 border-primary py-2 px-2 transition-opacity duration-200 hover:opacity-75 buttonnet"
+            type="button">
+            <img src="./lopecoin/img/chains/tron.svg" class="h-5 w-5 object-contain" />
+            <span class="hidden lg:block">BSC Network</span>
           </button>
-          <button type="button"
-            class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-gray-300">
-            <img src="./lopecoin/img/tokens/usdt.svg" alt="USDT" class="h-7 w-7 object-contain" width="30px" />
-            <span class="text-sm">USDT</span>
+
+          <div class="grid grid-cols-2 gap-5 lg:grid-cols-2">
+            <button type="button"
+              class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-green-600">
+              <img src="./lopecoin/img/chains/tron.svg" alt="Tron" class="h-7 w-7 object-contain" width="30px" />
+              <span class="text-sm">Tron</span>
+            </button>
+            <button type="button"
+              class="chains flex items-center justify-center gap-2 w-full rounded-xl border-2 py-2 px-2 transition-opacity duration-200 hover:opacity-75 border-gray-300">
+              <img src="./lopecoin/img/tokens/usdt.svg" alt="USDT" class="h-7 w-7 object-contain" width="30px" />
+              <span class="text-sm">USDT</span>
+            </button>
+          </div>
+          <div class="relative mt-2 flex flex-col items-center justify-center">
+            <span class="z-10 -mt-2 px-4 font-bold text-white bg-black">1 TronPad = $0.00000050</span>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-sm text-gray-600">Amount in <span class="font-bold tracking-widest">USDT</span> you pay</label>
+            <div class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input">
+              <input id="usdtInput" class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out" type="number" min="0" step="0.00001" placeholder="0.0" />
+              <div class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4">
+                <img src="./lopecoin/img/tokens/usdt.svg" alt="USDT Coin" class="h-6 w-6 object-contain" />
+              </div>
+            </div>
+          </div>
+        
+          <div class="flex flex-col gap-2">
+            <label class="text-sm text-gray-600">Amount in <span class="font-bold tracking-widest">TronPad</span> you receive</label>
+            <div class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input">
+              <input id="tronPadInput" class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out" type="number" min="0" step="0.00001" placeholder="0.0" />
+              <div class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4">
+                <img src="./lopecoin/img/tronpad.svg" alt="TronPadCoin" class="h-6 w-6 object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button claim-button"
+            type="button">
+            <span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>Buy TronPad
           </button>
-        </div>
-        <div class="relative mt-2 flex flex-col items-center justify-center">
-          <span class="z-10 -mt-2 px-4 font-bold text-white bg-black">1 TronPad = $0.00000050</span>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <label class="text-sm text-gray-600">Amount in <span class="font-bold tracking-widest">USDT</span> you
-            pay</label>
-          <div
-            class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input">
-            <input class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out" type="number"
-              min="0" step="0.00001" placeholder="0.0" value="" />
-            <div class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4">
-              <img src="./lopecoin/img/tokens/usdt.svg" alt="USDT Coin" class="h-6 w-6 object-contain" />
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <label class="text-sm text-gray-600">Amount in <span class="font-bold tracking-widest">TronPad</span> you
-            receive</label>
-          <div
-            class="flex w-full overflow-hidden rounded-xl border-2 border-gray-300 text-xl focus-within:border-primary/50 input">
-            <input class="flex-1 py-3 px-3 outline-none focus:ring-0 transition duration-200 ease-in-out" type="number"
-              min="0" step="0.00001" placeholder="0.0" value="" />
-            <div class="flex items-center justify-center border-l-2 border-gray-300 bg-[#f4f4f6] px-4">
-              <img src="./lopecoin/img/tronpad.svg" alt="TronPadCoin" class="h-6 w-6 object-contain" />
-            </div>
-          </div>
-        </div>
-
-        <button
-          class="relative flex w-full items-center justify-center gap-2 text-lg font-semibold text-white transition-opacity duration-200 hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-80 mt-2 :text-xl button claim-button"
-          type="button">
-          <span><i class="mdi mdi-wallet-plus-outline me-1"></i></span>Buy TronPad
-        </button>
-      </form>
-    </div>
-    <div class="col-md-6 ads">
-      <h1>TRONPAD IS THE FIRST LAUNCHPAD BUILT ON AND PARTNERED WITH THE TRON NETWORK</h1>
-      <!-- <img src="./lopecoin/img/lope.png" alt="Side background-image" /> -->
-      <p>
-        TRONPAD will empower crypto currency projects with the ability to distribute tokens and raise liquidity.
-      </p>
-
-      <h2>The world's fastest-growing public chain has officially partnered with the world's most lucrative launchpad.
-      </h2>
-      <img src="lopecoin/img/banner.png" alt="banner" width="100%">
-
-    </div>
-    <div class="container-fluid mb-5 mt-5 z-10">
-      <div class="container">
-        <div class="d-flex justify-content-center flex-wrap ">
-          <a class="nav-link btn-primary btn-lg" href="">View All Projects</a>
-          <a class="nav-link btn-justswap btn-lg" href="">Buy on <img src="./lopecoin/img/justswap.svg" alt=""></a>
-          <a class="nav-link btn-lg btn-pancake" href="">Vew On DEXTOOLS</a>
-          <a class="nav-link btn-lg btn-success" href="">Apply For IDO</a>
-        </div>
+        </form>
       </div>
-    </div>
+      <div class="col-md-6 ads">
+        <h1>TRONPAD IS THE FIRST LAUNCHPAD BUILT ON AND PARTNERED WITH THE TRON NETWORK</h1>
+        <!-- <img src="./lopecoin/img/lope.png" alt="Side background-image" /> -->
+        <p>
+          TRONPAD will empower crypto currency projects with the ability to distribute tokens and raise liquidity.
+        </p>
 
-    <div class="pp-home-about pp-section text-white mb-5 mt-5" id="about">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <div class="section-head">
-              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="What and Why">ABOUT US</h2>
-            </div>
-          </div>
-        </div>
+        <h2>The world's fastest-growing public chain has officially partnered with the world's most lucrative launchpad.
+        </h2>
+        <img src="lopecoin/img/banner.png" alt="banner" width="100%">
+
       </div>
-      <div class="pp-home-about-content pp-section-body mt-4">
+      <div class="container-fluid mb-5 mt-5 z-10">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <h6>WHAT IS TRONPAD?</h6>
-              <h2>TronPad is the only IDO platform built on and partnered with the Tron Network.</h2>
-              <p class="lead-s2">TronPad will empower cryptocurrency projects with the ability to distribute tokens and
-                raise liquidity.</p>
-              <h6 class="mt-4">WHY CHOOSE US?</h6>
-              <h2>Following the success of BSCPAD, the BSCPAD Team has partnered with Tron to bring its popular low
-                barrier to entry IDO solutions to to the Tron network that will incentivize and reward all token holders
-                in a way that is inclusive and fair.</h2>
-              <p>One of the fundamental flaws of existing launchpads is acquiring enough tokens to participate in the
-                ecosystem can be prohibitive. This can be based on a first come first serve basis where automated bots
-                can fill the whitelist spots in a matter of seconds. TronPad addresses this issue and is designed for
-                fair decentralized launches.</p>
-              <p>The hallmark of TronPad is a two-round system, consisting of a participation lottery for lower levels
-                and guaranteed allocation for higher levels. Any of the allocation that is not bought in time is then
-                offered on a 'first come first served' basis.</p>
-            </div>
-            <div class="col-md-6">
-              <div class="nk-block-img nk-block-ca text-center" data-aos="fade-up" data-aos-delay="200"
-                style="position: relative;">
-                <div class="nk-circle-animation nk-df-center fast"></div><img class="shadow rounded mx-auto"
-                  src="./lopecoin/img/sc-medium-a.png" alt="" style="width: 60%;">
+          <div class="d-flex justify-content-center flex-wrap ">
+            <a class="nav-link btn-primary btn-lg" href="">View All Projects</a>
+            <a class="nav-link btn-justswap btn-lg" href="">Buy on <img src="./lopecoin/img/justswap.svg" alt=""></a>
+            <a class="nav-link btn-lg btn-pancake" href="">Vew On DEXTOOLS</a>
+            <a class="nav-link btn-lg btn-success" href="">Apply For IDO</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pp-home-about pp-section text-white mb-5 mt-5" id="about">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-6">
+              <div class="section-head">
+                <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="What and Why">ABOUT US</h2>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="pp-home-how-it-work pp-section pt-3 text-white z-10" id="how-it-work">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-12">
-            <div class="section-head">
-              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="Tiered System">THE TRONPAD
-                TIERED SYSTEM</h2>
-              <p data-aos="fade-up" data-aos-delay="200" class="mt-3">TronPad offers a weighted lottery tier and
-                guaranteed allocation tiers.</p>
-              <div class="row align-items-center mt-5">
-                <div class="col-md-4"><img src="./lopecoin/img/bg.png" class="w-100"></div>
-                <div class="col-md-8 ps-md-5 font-18 text-start">
-                  <p></p>
-                  <p><b class="white-d">10%</b> for lottery Tiers (Earth tiers)</p>
-                  <p><b class="white-d">90%</b> for guaranteed allocation Tiers (higher tiers)</p>
+        <div class="pp-home-about-content pp-section-body mt-4">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <h6>WHAT IS TRONPAD?</h6>
+                <h2>TronPad is the only IDO platform built on and partnered with the Tron Network.</h2>
+                <p class="lead-s2">TronPad will empower cryptocurrency projects with the ability to distribute tokens
+                  and
+                  raise liquidity.</p>
+                <h6 class="mt-4">WHY CHOOSE US?</h6>
+                <h2>Following the success of BSCPAD, the BSCPAD Team has partnered with Tron to bring its popular low
+                  barrier to entry IDO solutions to to the Tron network that will incentivize and reward all token
+                  holders
+                  in a way that is inclusive and fair.</h2>
+                <p>One of the fundamental flaws of existing launchpads is acquiring enough tokens to participate in the
+                  ecosystem can be prohibitive. This can be based on a first come first serve basis where automated bots
+                  can fill the whitelist spots in a matter of seconds. TronPad addresses this issue and is designed for
+                  fair decentralized launches.</p>
+                <p>The hallmark of TronPad is a two-round system, consisting of a participation lottery for lower levels
+                  and guaranteed allocation for higher levels. Any of the allocation that is not bought in time is then
+                  offered on a 'first come first served' basis.</p>
+              </div>
+              <div class="col-md-6">
+                <div class="nk-block-img nk-block-ca text-center" data-aos="fade-up" data-aos-delay="200"
+                  style="position: relative;">
+                  <div class="nk-circle-animation nk-df-center fast"></div><img class="shadow rounded mx-auto"
+                    src="./lopecoin/img/sc-medium-a.png" alt="" style="width: 60%;">
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="pp-home-how-it-work-content pp-section-body">
+      
+      <div class="pp-home-how-it-work pp-section pt-3 text-white z-10" id="how-it-work">
         <div class="container">
-          <div class="text-center mb-5 mt-5">
-            <h3 class="text-uppercase"><b>LOTTERY TIER</b></h3>
-          </div>
-          <div class="row mb-3 justify-content-center">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="pricing-table text-center">
-                <p class="bold price-header"><b class="text-warning">Earth</b></p>
-                <hr>
-                <p class="light thin mb-0">Staking Requirement</p>
-                <p class="price" style="line-height: 1.3;"><span class="bold">5,000</span><br><i class="font-16">1
-                    lottery ticket</i></p>
-                <p class="price" style="line-height: 1.3;"><span class="bold">10,000</span><br><i class="font-16">2
-                    lottery ticket</i></p>
-                <p class="price" style="line-height: 1.3;"><span class="bold">15,000</span><br><i class="font-16">3
-                    lottery ticket</i></p>
-                <p class="light thin mb-0">Staking Length Required</p>
-                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
-                <hr><a
-                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
-                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-12">
+              <div class="section-head">
+                <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="Tiered System">THE TRONPAD
+                  TIERED SYSTEM</h2>
+                <p data-aos="fade-up" data-aos-delay="200" class="mt-3">TronPad offers a weighted lottery tier and
+                  guaranteed allocation tiers.</p>
+                <div class="row align-items-center mt-5">
+                  <div class="col-md-4"><img src="./lopecoin/img/bg.png" class="w-100"></div>
+                  <div class="col-md-8 ps-md-5 font-18 text-start">
+                    <p></p>
+                    <p><b class="white-d">10%</b> for lottery Tiers (Earth tiers)</p>
+                    <p><b class="white-d">90%</b> for guaranteed allocation Tiers (higher tiers)</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="text-center mb-5 mt-5">
-            <h3 class="text-uppercase"><b>GUARANTEED ALLOCATION TIERS</b></h3>
-          </div>
-          <div class="row mb-3 justify-content-center">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="pricing-table text-center">
-                <p class="bold price-header"><b class="text-warning">Moon</b></p>
-                <hr>
-                <p class="light thin mb-0">Staking Requirement</p>
-                <p class="bold price"><span>50,000</span></p>
-                <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
-                <p class="light thin mb-0">Staking Length Required</p>
-                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
-                <p class="light thin mb-0">Pool Weight</p>
-                <p class="value price"><span class="font-18">10</span></p>
-                <hr><a
-                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
-                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
-              </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="pricing-table text-center">
-                <p class="bold price-header"><b class="text-warning">Mars</b></p>
-                <hr>
-                <p class="light thin mb-0">Staking Requirement</p>
-                <p class="bold price"><span>200,000</span></p>
-                <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
-                <p class="light thin mb-0">Staking Length Required</p>
-                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
-                <p class="light thin mb-0">Pool Weight</p>
-                <p class="value price"><span class="font-18">45</span></p>
-                <hr><a
-                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
-                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
-              </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="pricing-table text-center">
-                <p class="bold price-header"><b class="text-warning">Sun</b></p>
-                <hr>
-                <p class="light thin mb-0">Staking Requirement</p>
-                <p class="bold price"><span>500,000</span></p>
-                <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
-                <p class="light thin mb-0">Staking Length Required</p>
-                <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
-                <p class="light thin mb-0">Pool Weight</p>
-                <p class="value price"><span class="font-18">70 + Private Allocations</span></p>
-                <hr><a
-                  href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
-                  target="blank" class="btn btn-primary btn-lg">Learn more</a>
-              </div>
-            </div>
-          </div>
-          <p class="text-center mb-5">Lottery winners will be announced prior to the IDO and can purchase their
-            allocation when IDO opens. All other guaranteed tiers users can purchase their guaranteed allocation when
-            the IDO opens too.All allocations will need to be purchased in the allotted time or it will be forfeited and
-            offered as first come first served.</p>
-          <div class="text-center mb-5 mt-5">
-            <h3 class="text-uppercase"><b>Round 2 - FCFS ROUND</b></h3>
-          </div>
-          <div class="row mb-5 align-items-center">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100"><img src="./lopecoin/img/gfx-e.png" alt=""
-                class="w-100"></div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <p>In round 2, the unsold tokens from the first round are made available on a FCFS basis, only to
-                guaranteed tiers (Moon and above). These members can purchase an additional amount that is determined by
-                a tier-based formula. This round is open until all tokens are sold, typically lasting for only a few
-                minutes. After all the tokens are sold, the IDO is concluded.</p>
-              <p class="mt-3"><b class="how-it-work-heading">We will be collecting both data and feedback on the IDO
-                  structure in order to optimize the system over time as well as taking into consideration community
-                  feedback and potential DAO proposals.</b></p>
-              <p>Our system is a predictable and provably fair system giving our users the proper incentives to
-                accumulate and hold tokens and support each and every project launched. Over time, we will tweak
-                weights, add new tiers and change other parameters as necessary to keep the system functional,
-                competitive and rewarding for all community members.</p>
-              <p>$TRONPAD is the next evolution of blockchain launchpads solving the fundamental flaws that plague
-                existing launchpads. This platform benefits all holders of the token and allows for fair launches giving
-                traders of all sizes the opportunity to invest in the best upcoming projects launching on the Tron
-                network.</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="pp-home-advisors pp-section py-5 z-10 text-white">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-12">
-            <div class="section-head">
-              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="PARTNER">STRATEGIC PARTNER</h2>
+        <div class="pp-home-how-it-work-content pp-section-body">
+          <div class="container">
+            <div class="text-center mb-5 mt-5">
+              <h3 class="text-uppercase"><b>LOTTERY TIER</b></h3>
             </div>
-          </div>
-          <div class="col-lg-12 mb-5">
-            <div class="pp-card-legal-partner darkmode">
-              <div class="mb-4"><img width="130" class="dark-show mx-auto" src="./lopecoin/img/tron-logo-d.png" alt="">
+            <div class="row mb-3 justify-content-center">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-table text-center">
+                  <p class="bold price-header"><b class="text-warning">Earth</b></p>
+                  <hr>
+                  <p class="light thin mb-0">Staking Requirement</p>
+                  <p class="price" style="line-height: 1.3;"><span class="bold">5,000</span><br><i class="font-16">1
+                      lottery ticket</i></p>
+                  <p class="price" style="line-height: 1.3;"><span class="bold">10,000</span><br><i class="font-16">2
+                      lottery ticket</i></p>
+                  <p class="price" style="line-height: 1.3;"><span class="bold">15,000</span><br><i class="font-16">3
+                      lottery ticket</i></p>
+                  <p class="light thin mb-0">Staking Length Required</p>
+                  <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                  <hr><a
+                    href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                    target="blank" class="btn btn-primary btn-lg">Learn more</a>
+                </div>
               </div>
-              <p class="mb-0">"The BSCPad team is very strong and knowledgeable, they consist of some of the top players
-                in the space. We are looking forward to taking this collaboration to new heights", Justin Sun, Founder
-                of TRON and CEO of BitTorrent.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pp-home-advisors pp-section py-3 z-10 text-white" id="advisor">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-12">
-            <div class="section-head">
-              <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="PARTNER">INCUBATOR AND
-                INVESTMENT PARTNER</h2>
+            <div class="text-center mb-5 mt-5">
+              <h3 class="text-uppercase"><b>GUARANTEED ALLOCATION TIERS</b></h3>
             </div>
-          </div>
-          <div class="col-lg-12 mb-5 mt-4">
-            <div class="pp-card-legal-partner darkmode">
-              <div class="mb-4"><img width="230" class="dark-show mx-auto" src="/images/bluzilla_logo.png" alt=""><img
-                  width="230" class="light-show mx-auto" src="/images/bluzilla_logo-df.png" alt=""></div>
-              <div>
-                <p>We specialize in taking your innovative and new idea from concept to completion through our market
-                  leading advisory, investment, development, influencer marketing and legal support services.</p>
-                <p>We are the only VC with in house developers, designers, marketers, influencers, traders, legal and
-                  launch pads.</p>
-                <p>We help by not only bringing capital and partners, but every aspect of your project from tokenomics
-                  to post launch marking.</p>
-                <div class="pt-3"><a href="https://bluezilla.vc/" target="_blank" class="btn btn-outline-primary">Learn
-                    more</a></div>
+            <div class="row mb-3 justify-content-center">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-table text-center">
+                  <p class="bold price-header"><b class="text-warning">Moon</b></p>
+                  <hr>
+                  <p class="light thin mb-0">Staking Requirement</p>
+                  <p class="bold price"><span>50,000</span></p>
+                  <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
+                  <p class="light thin mb-0">Staking Length Required</p>
+                  <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                  <p class="light thin mb-0">Pool Weight</p>
+                  <p class="value price"><span class="font-18">10</span></p>
+                  <hr><a
+                    href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                    target="blank" class="btn btn-primary btn-lg">Learn more</a>
+                </div>
+              </div>
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-table text-center">
+                  <p class="bold price-header"><b class="text-warning">Mars</b></p>
+                  <hr>
+                  <p class="light thin mb-0">Staking Requirement</p>
+                  <p class="bold price"><span>200,000</span></p>
+                  <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
+                  <p class="light thin mb-0">Staking Length Required</p>
+                  <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                  <p class="light thin mb-0">Pool Weight</p>
+                  <p class="value price"><span class="font-18">45</span></p>
+                  <hr><a
+                    href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                    target="blank" class="btn btn-primary btn-lg">Learn more</a>
+                </div>
+              </div>
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-table text-center">
+                  <p class="bold price-header"><b class="text-warning">Sun</b></p>
+                  <hr>
+                  <p class="light thin mb-0">Staking Requirement</p>
+                  <p class="bold price"><span>500,000</span></p>
+                  <p class="value price"><span class="font-18">1 Guaranteed Allocation</span></p>
+                  <p class="light thin mb-0">Staking Length Required</p>
+                  <p class="value price"><span class="font-18">3 hours before allocation round opens</span></p>
+                  <p class="light thin mb-0">Pool Weight</p>
+                  <p class="value price"><span class="font-18">70 + Private Allocations</span></p>
+                  <hr><a
+                    href="https://bscpad.medium.com/tronpad-tronpad-the-official-launchpad-of-the-tron-blockchain-8e0c7654e0ae"
+                    target="blank" class="btn btn-primary btn-lg">Learn more</a>
+                </div>
+              </div>
+            </div>
+            <p class="text-center mb-5">Lottery winners will be announced prior to the IDO and can purchase their
+              allocation when IDO opens. All other guaranteed tiers users can purchase their guaranteed allocation when
+              the IDO opens too.All allocations will need to be purchased in the allotted time or it will be forfeited
+              and
+              offered as first come first served.</p>
+            <div class="text-center mb-5 mt-5">
+              <h3 class="text-uppercase"><b>Round 2 - FCFS ROUND</b></h3>
+            </div>
+            <div class="row mb-5 align-items-center">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100"><img src="./lopecoin/img/gfx-e.png" alt=""
+                  class="w-100"></div>
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <p>In round 2, the unsold tokens from the first round are made available on a FCFS basis, only to
+                  guaranteed tiers (Moon and above). These members can purchase an additional amount that is determined
+                  by
+                  a tier-based formula. This round is open until all tokens are sold, typically lasting for only a few
+                  minutes. After all the tokens are sold, the IDO is concluded.</p>
+                <p class="mt-3"><b class="how-it-work-heading">We will be collecting both data and feedback on the IDO
+                    structure in order to optimize the system over time as well as taking into consideration community
+                    feedback and potential DAO proposals.</b></p>
+                <p>Our system is a predictable and provably fair system giving our users the proper incentives to
+                  accumulate and hold tokens and support each and every project launched. Over time, we will tweak
+                  weights, add new tiers and change other parameters as necessary to keep the system functional,
+                  competitive and rewarding for all community members.</p>
+                <p>$TRONPAD is the next evolution of blockchain launchpads solving the fundamental flaws that plague
+                  existing launchpads. This platform benefits all holders of the token and allows for fair launches
+                  giving
+                  traders of all sizes the opportunity to invest in the best upcoming projects launching on the Tron
+                  network.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="pp-home-advisors-content pp-section-body">
-        <div class="container"></div>
-      </div>
-    </div>
 
-    <div class="modal fade in z-10 text-white darkmode" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content modal-content modal-help">
-          <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
-              aria-label="Close"></button></div>
-          <div class="modal-body">
-            <div class="d-flex mb-3"><a class="btn btn-info me-2 w-100 text-white text-center"
-                href="https://link.trustwallet.com/open_url?coin_id=56&amp;url=https://tronpad.network/">Open with <img
-                  src="/images/trust_platform.png" width="30px" class="me-2" alt="tronpad"></a></div>
-            <h2 class="text-danger">How to Set Up and Use Trust Wallet for TRONPAD.NETWORK</h2>
-            <h5 class="mt-3">Setting up your wallet for Tron</h5>
-            <ul class="ps-0" style="list-style: none;">
-              <li>1). Download Trust Wallet. If you already have Trust Wallet, make sure your app is up to date.</li>
-              <li>2). Complete <a href="https://community.trustwallet.com/t/how-to-create-a-multi-coin-wallet/41"
-                  target="_blank">basic setup of a multi-coin wallet</a>. Remember to save your backup phrases.</li>
-              <li>3). Go to your Smart Chain wallet and press receive to find your address</li>
-              <li>4). That’s it! You’re ready to start using Tron</li>
-            </ul>
-            <h5 class="mt-4">Using TRONPAD.NETWORK in Trust Wallet</h5>
-            <ul class="ps-0" style="list-style: none;">
-              <li>5). For this part, iOS users will need the Dapp browser. Android users have the Dapp browser by
-                default.</li>
-              <li>6). Once you’ve topped up your wallet, open the Dapp browser by pressing on the four squares at the
-                bottom of the app.</li>
-            </ul>
-            <p class="text-center"><img class="mx-auto" src="/images/help-1.png" alt="pscpad" style="max-width: 97%;">
-            </p>
-            <ul class="ps-0" style="list-style: none;">
-              <li>7). Input <b>tronpad.network</b></li>
-              <li>8). Change network to Tron</li>
-              <li>9). Use the Dapp and have fun!</li>
-            </ul>
-            <h5 class="mt-5">Enable DApp Browser on Trust Wallet (iOS version)</h5>
-            <ul class="ps-0" style="list-style: none;">
-              <li>
-                <p>&nbsp;<b>trust.//browser_enable</b>, then tap on&nbsp;<b>Go</b></p>
-                <p><img class="mx-auto" src="/images/help-2.png" alt="" style="max-width: 97%;"></p>
-              </li>
-              <li>
-                <p>2). A prompt will appear that will ask if you want to&nbsp;<b>Open this page in “Trust”?</b>, tap
-                  on&nbsp;<b>Open</b></p>
-                <p><img class="mx-auto" src="/images/help-3.png" alt="" style="max-width: 97%;"></p>
-                <p>The&nbsp;<b>Trust Wallet</b>&nbsp;app will launch and the&nbsp;<b>DApp&nbsp;browser</b>&nbsp;will be
-                  enabled</p>
-                <p><img class="mx-auto" src="/images/help-4.png" alt="" style="max-width: 97%;"></p>
-              </li>
-            </ul>
-            <div class="d-flex mt-4"><a class="btn btn-info me-2 w-100 text-white text-center"
-                href="https://link.trustwallet.com/open_url?coin_id=56&amp;url=https://tronpad.network/">Open with <img
-                  src="/images/trust_platform.png" width="30px" class="me-2"></a></div>
+      <div class="pp-home-advisors pp-section py-5 z-10 text-white">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-12">
+              <div class="section-head">
+                <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="PARTNER">STRATEGIC PARTNER
+                </h2>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-5">
+              <div class="pp-card-legal-partner darkmode">
+                <div class="mb-4"><img width="130" class="dark-show mx-auto" src="./lopecoin/img/tron-logo-d.png"
+                    alt="">
+                </div>
+                <p class="mb-0">"The BSCPad team is very strong and knowledgeable, they consist of some of the top
+                  players
+                  in the space. We are looking forward to taking this collaboration to new heights", Justin Sun, Founder
+                  of TRON and CEO of BitTorrent.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
-    <!-- <div class="pp-home-contact pp-section pb-5 pt-5" id="contact">
+      <div class="pp-home-advisors pp-section py-3 z-10 text-white" id="advisor">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-12">
+              <div class="section-head">
+                <h2 class="title title-xl" data-aos="fade-up" data-aos-delay="100" title="PARTNER">INCUBATOR AND
+                  INVESTMENT PARTNER</h2>
+              </div>
+            </div>
+            <div class="col-lg-12 mb-5 mt-4">
+              <div class="pp-card-legal-partner darkmode">
+                <div class="mb-4"><img width="230" class="dark-show mx-auto" src="/images/bluzilla_logo.png" alt=""><img
+                    width="230" class="light-show mx-auto" src="/images/bluzilla_logo-df.png" alt=""></div>
+                <div>
+                  <p>We specialize in taking your innovative and new idea from concept to completion through our market
+                    leading advisory, investment, development, influencer marketing and legal support services.</p>
+                  <p>We are the only VC with in house developers, designers, marketers, influencers, traders, legal and
+                    launch pads.</p>
+                  <p>We help by not only bringing capital and partners, but every aspect of your project from tokenomics
+                    to post launch marking.</p>
+                  <div class="pt-3"><a href="https://bluezilla.vc/" target="_blank"
+                      class="btn btn-outline-primary">Learn
+                      more</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pp-home-advisors-content pp-section-body">
+          <div class="container"></div>
+        </div>
+      </div>
+
+      <div class="modal fade in z-10 text-white darkmode" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-content modal-help">
+            <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button></div>
+            <div class="modal-body">
+              <div class="d-flex mb-3"><a class="btn btn-info me-2 w-100 text-white text-center"
+                  href="https://link.trustwallet.com/open_url?coin_id=56&amp;url=https://tronpad.network/">Open with
+                  <img src="/images/trust_platform.png" width="30px" class="me-2" alt="tronpad"></a></div>
+              <h2 class="text-danger">How to Set Up and Use Trust Wallet for TRONPAD.NETWORK</h2>
+              <h5 class="mt-3">Setting up your wallet for Tron</h5>
+              <ul class="ps-0" style="list-style: none;">
+                <li>1). Download Trust Wallet. If you already have Trust Wallet, make sure your app is up to date.</li>
+                <li>2). Complete <a href="https://community.trustwallet.com/t/how-to-create-a-multi-coin-wallet/41"
+                    target="_blank">basic setup of a multi-coin wallet</a>. Remember to save your backup phrases.</li>
+                <li>3). Go to your Smart Chain wallet and press receive to find your address</li>
+                <li>4). That’s it! You’re ready to start using Tron</li>
+              </ul>
+              <h5 class="mt-4">Using TRONPAD.NETWORK in Trust Wallet</h5>
+              <ul class="ps-0" style="list-style: none;">
+                <li>5). For this part, iOS users will need the Dapp browser. Android users have the Dapp browser by
+                  default.</li>
+                <li>6). Once you’ve topped up your wallet, open the Dapp browser by pressing on the four squares at the
+                  bottom of the app.</li>
+              </ul>
+              <p class="text-center"><img class="mx-auto" src="/images/help-1.png" alt="pscpad" style="max-width: 97%;">
+              </p>
+              <ul class="ps-0" style="list-style: none;">
+                <li>7). Input <b>tronpad.network</b></li>
+                <li>8). Change network to Tron</li>
+                <li>9). Use the Dapp and have fun!</li>
+              </ul>
+              <h5 class="mt-5">Enable DApp Browser on Trust Wallet (iOS version)</h5>
+              <ul class="ps-0" style="list-style: none;">
+                <li>
+                  <p>&nbsp;<b>trust.//browser_enable</b>, then tap on&nbsp;<b>Go</b></p>
+                  <p><img class="mx-auto" src="/images/help-2.png" alt="" style="max-width: 97%;"></p>
+                </li>
+                <li>
+                  <p>2). A prompt will appear that will ask if you want to&nbsp;<b>Open this page in “Trust”?</b>, tap
+                    on&nbsp;<b>Open</b></p>
+                  <p><img class="mx-auto" src="/images/help-3.png" alt="" style="max-width: 97%;"></p>
+                  <p>The&nbsp;<b>Trust Wallet</b>&nbsp;app will launch and the&nbsp;<b>DApp&nbsp;browser</b>&nbsp;will
+                    be
+                    enabled</p>
+                  <p><img class="mx-auto" src="/images/help-4.png" alt="" style="max-width: 97%;"></p>
+                </li>
+              </ul>
+              <div class="d-flex mt-4"><a class="btn btn-info me-2 w-100 text-white text-center"
+                  href="https://link.trustwallet.com/open_url?coin_id=56&amp;url=https://tronpad.network/">Open with
+                  <img src="/images/trust_platform.png" width="30px" class="me-2"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="pp-home-contact pp-section pb-5 pt-5" id="contact">
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-6">
@@ -871,7 +866,9 @@
         </div>
       </div>
     </div> -->
+    </div>
   </div>
+
 
   <script>
     function startCountdown(duration, display) {
@@ -906,6 +903,28 @@
       const duration = 86400 * 5; // countdown duration in seconds (5 days)
       startCountdown(duration, countdownElement);
     };
+
+    const usdtInput = document.getElementById('usdtInput');
+    const tronPadInput = document.getElementById('tronPadInput');
+    const conversionRate = 3; // 1 Tron equals 3 TronPad
+
+    usdtInput.addEventListener('input', () => {
+      const usdtValue = parseFloat(usdtInput.value);
+      if (!isNaN(usdtValue)) {
+        tronPadInput.value = (usdtValue * conversionRate).toFixed(5);
+      } else {
+        tronPadInput.value = '';
+      }
+    });
+
+    tronPadInput.addEventListener('input', () => {
+      const tronPadValue = parseFloat(tronPadInput.value);
+      if (!isNaN(tronPadValue)) {
+        usdtInput.value = (tronPadValue / conversionRate).toFixed(5);
+      } else {
+        usdtInput.value = '';
+      }
+    });
   </script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
